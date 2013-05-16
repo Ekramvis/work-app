@@ -13,10 +13,10 @@
 <%= f.label :salary %>
 <%= f.text_field :salary %>
 
-<%= f.label :photo_url %>
-<%= f.text_field :photo_url %>
-
 <%= f.label :favorite_day %>
 <%= f.collection_select :favorite_day, Date::DAYNAMES, :to_s, :to_s  %>
 
-<%= hidden_field_tag "employee[employee_id]", @employee_profile.employee_id %>
+<%#= hidden_field_tag "employee[employee_id]", @employee_profile.employee_id %>
+
+<%= f.label :picture %>
+<%= f.file_field :picture %>

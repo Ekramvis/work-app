@@ -3,6 +3,7 @@ class EmployeesController < ApplicationController
   def new
     @employee = Employee.new
     @employees = Employee.includes(:employee_profile).all
+    @employee.build_employee_profile
     @teams = Team.all
   end
 
@@ -41,7 +42,7 @@ class EmployeesController < ApplicationController
   end
 
   def show
-    @employee = Employee.includes(:employee_profiles).find(params[:id])
+    @employee = Employee.includes(:employee_profile).find(params[:id])
   end
 
 end
