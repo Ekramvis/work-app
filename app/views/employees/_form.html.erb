@@ -16,31 +16,7 @@
 
   <div class="subform">
     <%= f.fields_for(:employee_profile) do |ep| %>
-      <%#= render partial: 'shared/profile_fields', locals: {f: ep}%>
-      <%= ep.label :name %>
-      <%= ep.text_field :name %>
-
-      <%= ep.label :height %>
-      <%= ep.text_field :height %>
-
-      <%= ep.label :age %>
-      <%= ep.text_field :age %>
-
-      <%= ep.label :favorite_food %>
-      <%= ep.text_field :favorite_food %>
-
-      <%= ep.label :salary %>
-      <%= ep.text_field :salary %>
-
-      <%= ep.label :favorite_day %>
-      <%= ep.collection_select :favorite_day, Date::DAYNAMES, :to_s, :to_s  %>
-
-      <%#= hidden_field_tag "employee[employee_id]", @employee_profile.employee_id %>
-
-      <%= ep.label :picture %>
-      <%= ep.file_field :picture %>
-
-
+      <%= render partial: 'shared/profile_fields', locals: {f: ep}%>
     <%end%>
   </div>
 
