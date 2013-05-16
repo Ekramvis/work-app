@@ -1,3 +1,8 @@
-<h1>Profile Show Page</h1>
+<header class="page-header">
+  <h1>Profile Show Page</h1>
+</header>
 
 <%= @employee_profile.inspect %>
+
+
+<%= image_tag(@employee_profile.picture.url(:big))%>

@@ -23,6 +23,10 @@
 
   <%= hidden_field_tag "employee[employee_id]", @employee_profile.employee_id %>
 
+  <%= f.label :picture %>
+  <%= f.file_field :picture %>
+
+
   <%= f.submit "Submit" %>
 
 <% end %>
