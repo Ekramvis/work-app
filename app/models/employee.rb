@@ -11,4 +11,8 @@ class Employee < ActiveRecord::Base
            foreign_key: :supervisor_id, inverse_of: :supervisor
 
   has_one :employee_profile, inverse_of: :employee
+
+  def name
+    self.employee_profile.try(&:name)
+  end
 end

@@ -1,6 +1,7 @@
 class EmployeeProfilesController < ApplicationController
 
   def show
+    @employee_profile = EmployeeProfile.find(params[:id])
   end
 
   def new
@@ -18,8 +19,16 @@ class EmployeeProfilesController < ApplicationController
   end
 
   def edit
+    @employee_profile = EmployeeProfile.find(params[:id])
   end
 
   def update
+    @employee_profile = EmployeeProfile.find(params[:id])
+
+    if @employee_profile.update_attributes(params[:employee_profile])
+      redirect_to employee_employee_profile_url(@employee_profile)
+    else
+      render :edit
+    end
   end
 end

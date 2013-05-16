@@ -1,0 +1,28 @@
+<%= form_for(@employee_profile) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :height %>
+  <%= f.text_field :height %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <%= f.label :favorite_food %>
+  <%= f.text_field :favorite_food %>
+
+  <%= f.label :salary %>
+  <%= f.text_field :salary %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.label :favorite_day %>
+  <%= f.collection_select :favorite_day, Date::DAYNAMES, :to_s, :to_s  %>
+
+  <%= hidden_field_tag "employee[employee_id]", @employee_profile.employee_id %>
+
+  <%= f.submit "Submit" %>
+
+<% end %>
