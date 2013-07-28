@@ -2,7 +2,7 @@ Employee Manager
 ===
 ###Summary
 Simple employee database application created as a Rails exercise to learn about inverse associations, 
-foreign keys, join tables, one-to-one assocations
+foreign keys, join tables, one-to-one assocations, and passing in local variables to partials.
 
 ##Technologies Used
 Rails, Paperclip
