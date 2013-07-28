@@ -5,7 +5,7 @@ Simple employee database application created as a Rails exercise to learn about 
 foreign keys, join tables, one-to-one assocations
 
 ##Technologies Used
-Rails, Paperclip, Bootstrap, Better Errors
+Rails, Paperclip
 
 ##How To Run
 1. Clone this repo
